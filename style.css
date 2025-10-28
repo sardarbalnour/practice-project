@@ -1,0 +1,24 @@
+/* * {
+  padding: 0px;
+  margin: 0px;
+}
+
+div {
+  color: rgb(1, 8, 8);
+  background-color: antiquewhite;
+  width: 200px;
+}
+.my-text {
+  color: blue;
+} */
+.dare {
+  width: 200px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.zhore {
+  background-color: violet;
+  width: 80%;
+  height: 20%;
+}
