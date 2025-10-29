@@ -20,6 +20,7 @@ div {
   background-color: brown;
   margin-top: 100px;
   height: 400px;
+  position: relative;
 }
 .dare {
   background-color: aquamarine;
@@ -36,9 +37,21 @@ div {
   margin: 20px;
   outline: 2px solid slateblue;
   outline-offset: -10px ;
+  position: absolute;
+  top: 80px;
 }
 
 .zhore {
   background-color: violet;
   font: 700 italic 2rem "y";
+}
+
+#call{
+  background-color: blue;
+  display: inline-block;
+  padding: 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 10px;
 }
