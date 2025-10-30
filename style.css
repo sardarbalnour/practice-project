@@ -1,57 +1,14 @@
-* {
-  padding: 0px;
-  margin: 0px;
-}
-/* 
-div {
-  color: rgb(1, 8, 8);
-  background-color: antiquewhite;
-  width: 200px;
-}
-.my-text {
-  color: blue;
-} */
-body{
-  background-color: rgb(203, 145, 72);
+.container{
+  background-color: cornflowerblue;
+  height: 50vh;
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-div {
-  font-size: 16px;
-  background-color: brown;
-  margin-top: 100px;
-  height: 400px;
-  position: relative;
-}
-.dare {
-  background-color: aquamarine;
-  font-size: 32px;
-  width: calc(100vw - 60px);
-  height: 30vh;
-  text-align: justify;
-  text-indent: 10px;
-  line-height: 40px;
-  padding: 10px;
-  box-sizing: border-box;
-  /* border: 10px solid black; */
-  border-bottom-right-radius: 20px;
-  margin: 20px;
-  outline: 2px solid slateblue;
-  outline-offset: -10px ;
-  position: absolute;
-  top: 80px;
-}
-
-.zhore {
-  background-color: violet;
-  font: 700 italic 2rem "y";
-}
-
-#call{
-  background-color: blue;
-  display: inline-block;
-  padding: 10px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  border-radius: 10px;
+.child{
+  background-color: aliceblue;
+  height: 50px;
+  margin: 15px;
 }
