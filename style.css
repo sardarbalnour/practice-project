@@ -1,14 +1,17 @@
-.container{
+.container {
   background-color: cornflowerblue;
-  height: 50vh;
-  display: flex;
-  justify-content:flex-start;
-  flex-wrap: wrap;
+  height: 80vh;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   align-items: center;
+
+  gap: 10%;
+  /* grid-template-columns:  minmax(100px, auto); */
 }
 
-.child{
+.child {
   background-color: aliceblue;
   height: 50px;
-  margin: 15px;
+  /* margin: 15px; */
 }
