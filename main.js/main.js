@@ -37,11 +37,35 @@ const str = "slaw mama jian vaazt chona?";
 // array2.splice(0, 2, firstTwoSports);
 // console.log(array2);
 
-const age = 24;
-const data = {
-  name: "sardar",
-  age: 25,
-};
-console.log(data);
-const { age: age2, name } = data;
-console.log(name,age2);
+// const age = 24;
+// const data = {
+//   name: "sardar",
+//   age: 25,
+// };
+// console.log(data);
+// const { age: age2, name } = data;
+// console.log(name,age2);
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+// const value2 = "rock";
+
+// switch (value2) {
+//   case "sissor":
+//     console.log("win");
+//     break;
+
+//   case "rock":
+//     console.log("lost");
+//     break;
+
+//   default:
+//     console.log("You chose no one!!!");
+//     break;
+// }
+
+const arr = [1, 2, 3, 4, 5];
+for (const i of arr) {
+  console.log(i);
+}
