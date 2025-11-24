@@ -1,51 +1,45 @@
-const choices = ["rock", "paper", "scissors"];
-let playerScore = 0;
-let computerScore = 0;
+const randomNumber = Math.ceil(Math.random() * 100);
+// console.log(randomNumber);
+let numberOfGuess = 0;
 
-const checkWinner = (player, computer) => {
-  if (player === computer) {
-    return "draw";
-  } else if (player === "rock") {
-    return computer === "scissors" ? "player" : "computer";
-  } else if (player === "paper") {
-    return computer === "scissors" ? "computer" : "player";
-  } else {
-    return computer === "rock" ? "computer" : "player";
+const validateNumber = (value) => {
+  if (isNaN(value)) {
+    return "Please enter a valid number";
+  } else if (+value < 1 || +value > 100) {
+    return "Please enter a number between 1 and 100";
   }
 };
 
-const showResult = (result) => {
-  if (result === "player") {
-    console.log("you won");
-    playerScore++;
-  } else if (result === "computer") {
-    console.log("computer won");
-    computerScore++;
+const checkGuess = (guess) => {
+  numberOfGuess++;
+  if (guess === randomNumber) {
+    console.log("You guessed corectly");
+  } else if (guess < randomNumber) {
+    console.log("Too low, try again!");
+    play();
   } else {
-    console.log("it's a tie");
+    console.log("Too high, try again!!");
+    play();
   }
-  console.log(`Your score is: ${playerScore}`);
-  console.log(`Computer score is: ${computerScore}`);
-  console.log("------------------------------------");
 };
 
 const play = () => {
-  const playerChoice = prompt("shteki leda day");
-  if (choices.indexOf(playerChoice?.toLowerCase()) !== -1) {
-    console.log(`You choose ${playerChoice.toLowerCase()}`);
-  } else {
-    console.log("You cheated");
+  const userNumber = prompt("Enter a number between 1 and 100");
+
+  if (userNumber === null) return;
+
+  if (numberOfGuess >= 10) {
+    console.log("Game over");
     return;
   }
-  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-  console.log(`computer chooses ${computerChoice}`);
-  const gameResult = checkWinner(playerChoice, computerChoice);
-  showResult(gameResult);
-  if (playerScore == 5 || computerScore == 5) {
-    console.log("game finished");
-    return;
+
+  const validation = validateNumber(userNumber);
+  if (validation) {
+    console.log(validation);
+    return play();
   }
-  play();
+
+  checkGuess(+userNumber);
 };
 
 play();
