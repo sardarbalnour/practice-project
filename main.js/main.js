@@ -41,7 +41,11 @@ const play = () => {
   console.log(`computer chooses ${computerChoice}`);
   const gameResult = checkWinner(playerChoice, computerChoice);
   showResult(gameResult);
-  play()
+  if (playerScore == 5 || computerScore == 5) {
+    console.log("game finished");
+    return;
+  }
+  play();
 };
 
 play();
