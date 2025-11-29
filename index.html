@@ -8,12 +8,112 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>sardar</h1>
-      <div class="child">child1</div>
-      <div class="child">child2</div>
-      <div class="child">child3</div>
-    </div>
+    <header>
+      <p>Yourshop.com | Products page</p>
+    </header>
+
+    <main>
+      <div id="search">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search product name"
+        />
+        <div>
+          <button class="filter selected" data-filter="all">All</button>
+          <button class="filter" data-filter="clothing">Clothing</button>
+          <button class="filter" data-filter="health">Health</button>
+          <button class="filter" data-filter="tech">Tech</button>
+        </div>
+        <div id="search-price">
+          <input type="number" placeholder="Search price" />
+          <button id="search-button">Search</button>
+        </div>
+      </div>
+      <div id="products">
+        <div class="product-item" data-category="tech">
+          <img
+            src="./img/iphone.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="tech"
+          />
+          <p>Apple iphone 14 pro</p>
+          <span>$ 1499</span>
+        </div>
+        <div class="product-item" data-category="clothing">
+          <img
+            src="./img/jacket.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="clothing"
+          />
+          <p>Jacket</p>
+          <span>$ 399</span>
+        </div>
+        <div class="product-item" data-category="tech">
+          <img
+            src="./img/watch.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="tech"
+          />
+          <p>Apple watch</p>
+          <span>$ 499</span>
+        </div>
+        <div class="product-item" data-category="tech">
+          <img
+            src="./img/airpods.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="tech"
+          />
+          <p>Apple airpods pro</p>
+          <span>$ 299</span>
+        </div>
+        <div class="product-item" data-category="clothing">
+          <img
+            src="./img/bag.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="clothing"
+          />
+          <p>College bag</p>
+          <span>$ 162</span>
+        </div>
+        <div class="product-item" data-category="health">
+          <img
+            src="./img/cream.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="health"
+          />
+          <p>Face cream</p>
+          <span>$ 39</span>
+        </div>
+        <div class="product-item" data-category="health">
+          <img
+            src="./img/shampoo.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="health"
+          />
+          <p>Keratin hair care</p>
+          <span>$ 29</span>
+        </div>
+        <div class="product-item" data-category="clothing">
+          <img
+            src="./img/shoes.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="clothing"
+          />
+          <p>Running shoes</p>
+          <span>$ 199</span>
+        </div>
+        <div class="product-item" data-category="health">
+          <img
+            src="./img/vitamin.png"
+            alt="Sorry, we can't upload the photo right now."
+            data-category="health"
+          />
+          <p>Vitamin E</p>
+          <span>$ 15</span>
+        </div>
+      </div>
+    </main>
     <script src="./main.js/main.js"></script>
   </body>
 </html>
