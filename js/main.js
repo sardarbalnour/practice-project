@@ -66,3 +66,4 @@ window.addEventListener("load", () => {
   searchInput.addEventListener("keyup", searchHandler);
   priceButton.addEventListener("click", searchPriceHandler);
 });
+//storage learning
