@@ -5,115 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sardar</title>
     <link rel="shortcut icon" href="./images/iphone.png" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <p>Yourshop.com | Products page</p>
-    </header>
+    <div class="container">
+      <h2>Todo app | Sardar edition</h2>
 
-    <main>
-      <div id="search">
-        <input
-          id="search-input"
-          type="text"
-          placeholder="Search product name"
-        />
+      <div class="input-section">
+        <input type="text" placeholder="Add task ..." id="task-input" />
+        <input type="date" id="date-input" />
+        <button id="add-button">Add</button>
+        <button id="edit-button">Edit</button>
+      </div>
+
+      <div class="todos-operator">
         <div>
-          <button class="filter selected" data-filter="all">All</button>
-          <button class="filter" data-filter="clothing">Clothing</button>
-          <button class="filter" data-filter="health">Health</button>
-          <button class="filter" data-filter="tech">Tech</button>
+          <button class="filter-todos" data-filter="all">All</button>
+          <button class="filter-todos" data-filter="pending">Pending</button>
+          <button class="filter-todos" data-filter="completed">
+            Completed
+          </button>
         </div>
-        <div id="search-price">
-          <input type="number" placeholder="Search price" />
-          <button id="search-button">Search</button>
-        </div>
+        <button id="delete-all-button">Delete all</button>
       </div>
-      <div id="products">
-        <div class="product-item" data-category="tech">
-          <img
-            src="./img/iphone.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="tech"
-          />
-          <p>Apple iphone 14 pro</p>
-          <span>$ 1499</span>
-        </div>
-        <div class="product-item" data-category="clothing">
-          <img
-            src="./img/jacket.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="clothing"
-          />
-          <p>Jacket</p>
-          <span>$ 399</span>
-        </div>
-        <div class="product-item" data-category="tech">
-          <img
-            src="./img/watch.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="tech"
-          />
-          <p>Apple watch</p>
-          <span>$ 499</span>
-        </div>
-        <div class="product-item" data-category="tech">
-          <img
-            src="./img/iphone.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="tech"
-          />
-          <p>Apple airpods pro</p>
-          <span>$ 299</span>
-        </div>
-        <div class="product-item" data-category="clothing">
-          <img
-            src="./img/jacket.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="clothing"
-          />
-          <p>College bag</p>
-          <span>$ 162</span>
-        </div>
-        <div class="product-item" data-category="health">
-          <img
-            src="./img/watch.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="health"
-          />
-          <p>Face cream</p>
-          <span>$ 39</span>
-        </div>
-        <div class="product-item" data-category="health">
-          <img
-            src="./img/iphone.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="health"
-          />
-          <p>Keratin hair care</p>
-          <span>$ 29</span>
-        </div>
-        <div class="product-item" data-category="clothing">
-          <img
-            src="./img/jacket.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="clothing"
-          />
-          <p>Running shoes</p>
-          <span>$ 199</span>
-        </div>
-        <div class="product-item" data-category="health">
-          <img
-            src="./img/iphone.png"
-            alt="Sorry, we can't upload the photo right now."
-            data-category="health"
-          />
-          <p>Vitamin E</p>
-          <span>$ 15</span>
-        </div>
-      </div>
-    </main>
+    </div>
+
+    <div id="alert-message"></div>
+
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
