@@ -46,12 +46,14 @@ const displayTodos = () => {
         <td>
           <button>Edit</button>
           <button>Do</button>
-          <button>Delete</button>
+          <button onclick="deleteHandler('${todo.id}')">Delete</button>
         </td>
       </tr>
     `;
   });
 };
+
+//'${todo.id}' baraye in daxele single koteyshen neveshtim chon adad bod ta string beshe ke baraye moqayese dochare moshkel nashim
 
 const addHandler = () => {
   const task = taskInput.value;
@@ -83,6 +85,14 @@ const deleteAllHandler = () => {
   } else {
     showAlert("No todos to clear!", "error");
   }
+};
+
+const deleteHandler = (id) => {
+  const newTodos = todos.filter((todo) => todo.id != id);
+  todos = newTodos;
+  saveToLocalStorage();
+  displayTodos();
+  showAlert("Todo deleted successfully.", "success");
 };
 
 window.addEventListener("load", displayTodos);
