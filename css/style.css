@@ -150,4 +150,5 @@ background-color: var(--color-error);
 
 #edit-button {
     display: none;
+    background-color: var(--color-warning);
 }
