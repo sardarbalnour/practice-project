@@ -161,3 +161,4 @@ filterButtons.forEach((button) => {
 });
 
 // module
+// asynchrono
