@@ -159,3 +159,5 @@ editButton.addEventListener("click", applyEditHandler);
 filterButtons.forEach((button) => {
   button.addEventListener("click", filterHandler);
 });
+
+// module
